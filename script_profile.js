@@ -1,6 +1,6 @@
 document.getElementById("do_not_button").
 addEventListener("click", function() {
-    
+
     document.querySelectorAll('*').forEach(function(element) {
         element.style.backgroundColor = 'blue';
     });
@@ -44,3 +44,22 @@ addEventListener("click", function() {
         image.src = "jupiter.jpg";
     }
 });
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+    document.getElementById("scrollToTopBtn").classList.add("show");
+  } else {
+    document.getElementById("scrollToTopBtn").classList.remove("show");
+  }
+}
+
+function scrollToTop() {
+  var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+  if (currentPosition > 0) {
+    window.requestAnimationFrame(scrollToTop);
+    window.scrollTo(0, currentPosition - currentPosition / 20);
+  }
+}

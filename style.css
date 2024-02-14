@@ -158,3 +158,28 @@ footer {
     }
   }
   
+  .hidden {
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+  
+  #scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
+  
+  #scrollToTopBtn.show {
+    opacity: 1;
+  }
