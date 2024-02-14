@@ -1,0 +1,143 @@
+* {
+    background-color: black;
+}
+
+h1 {
+    text-align: center;
+    font-size: 100px;
+    color: white;
+    margin-top: 300px;
+    background-color: black;
+}
+
+.a-tag {
+    text-align: center;
+    font-size: 50px;
+}
+
+.profile-button {
+    margin: 10px;
+}
+
+.academic-button {
+    margin: 10px;
+}
+
+.test {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.test a {
+    font-size: 40px;
+    color: green;
+    padding: 5px;
+    border: solid 2px green;
+}
+
+.jupiter {
+    height: 30%;
+    width: 30%;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin: 50px;
+    padding: 20px;
+    overflow: hidden;
+    display: inline;
+}
+
+.profile {
+    display: flex;
+    color: white;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+    margin: 50px;
+}
+
+.profile p {
+    font-size: 50px;
+    padding-left: 200px;
+}
+
+h2 {
+    color: white;
+    text-align: right;
+}
+
+#button1 {
+    color: blue;
+    font-size: 30px;
+}
+
+footer {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.table {
+    margin: auto;
+}
+
+.table table {
+    color: white;
+    font-size: 30px;
+    border-spacing: 5px;
+    text-align: center;
+    border: 1px solid gray;
+}
+
+.history {
+    color: white;
+    font-size: 25px;
+}
+
+.history p {
+    font-size: 45px;
+}
+
+.button {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.button button {
+    color: green;
+    border: 2px solid green;
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+}
+
+.button1 {
+    padding: 20px;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #shiningEffect {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: pink;
+    animation: shining 1s infinite alternate;
+    display: none;
+  }
+  
+  @keyframes shining {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+  
