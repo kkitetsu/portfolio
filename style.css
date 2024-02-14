@@ -84,6 +84,12 @@ footer {
     border-spacing: 5px;
     text-align: center;
     border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+.table tr td {
+    border: solid 1px;
+    padding: 20px;
 }
 
 .history {
