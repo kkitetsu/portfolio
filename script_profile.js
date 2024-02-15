@@ -32,6 +32,7 @@ addEventListener("click", function() {
     restartingLabel.style.left = '50%';
     restartingLabel.style.color = 'yellow'; 
     restartingLabel.style.fontSize = '36px';
+    restartingLabel.style.background = 'blue'; 
     document.body.appendChild(restartingLabel);
 });
 

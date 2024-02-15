@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="stock_css.css"> -->
+    <style>
+        .input {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            margin-top: 300px;
+        }
+
+        .input input {
+            display: flex;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .to_show {
+            display: flex;
+            justify-content: center;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    {% if entered_string %}
+    <div class="to_show">
+        <ul>
+            {% for string in entered_string %}
+            <li>{{ string }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+    <div class="input">
+        <form method="post">
+            <label for="textarea">Enter the valid ticker:</label><br>
+            <textarea id="textarea" name="textarea" rows="1" cols="20"></textarea><br>
+            <button type="submit">Add Stock</button>
+        </form>
+    </div>
+    <div></div>
+</body>
+</html>
