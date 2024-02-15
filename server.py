@@ -17,8 +17,12 @@ def submit():
         company_name = stock_data.info['longName']
         historical_data = stock_data.history(period="1d")
         close_price = historical_data['Close'].iloc[-1]
-        to_return = 'Price for ' + company_name + " is: " + str(close_price)
-        entered_string.append(to_return)
+        symbol = stock_data.info['symbol']
+        # to_return = 'Price for ' + company_name + " is: " + str(close_price)
+        entered_string.append({'symbol': symbol[0:4], 
+                               'name': company_name, 
+                               'price': close_price})
+        # entered_string.append(to_return)
   return render_template('stock.html', entered_string=entered_string)
 
 if __name__ == '__main__':

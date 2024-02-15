@@ -6,9 +6,13 @@
     <title>Document</title>
     <!-- <link rel="stylesheet" href="stock_css.css"> -->
     <style>
+        * {
+            background-color: lightgrey;
+            justify-content: center;
+        }
+
         .input {
             display: flex;
-            justify-content: center;
             align-items: center;
             height: 100%;
             margin-top: 300px;
@@ -16,26 +20,41 @@
 
         .input input {
             display: flex;
-            justify-content: center;
             height: 100%;
         }
 
         .to_show {
             display: flex;
-            justify-content: center;
             height: 100%;
+        }
+
+        .table {
+            color: black;
+            font-size: 30px;
+            display: flex;
+            border-spacing: 5px;
+            text-align: center;
+            border: 1px solid gray;
+            border-collapse: collapse;
+        }
+
+        .table tr td {
+            border: solid 1px;
+            padding: 20px;
         }
     </style>
 </head>
 <body>
     {% if entered_string %}
-    <div class="to_show">
-        <ul>
-            {% for string in entered_string %}
-            <li>{{ string }}</li>
-            {% endfor %}
-        </ul>
-    </div>
+    <table class="table">
+        {% for stock in entered_string %}
+            <tr>
+                <td>{{ stock.symbol }}</td>
+                <td>{{ stock.name }}</td>
+                <td>{{ stock.price }}</td>
+            </tr>
+        {% endfor %}
+    </table>
     {% endif %}
     <div class="input">
         <form method="post">
