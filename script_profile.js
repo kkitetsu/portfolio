@@ -48,7 +48,7 @@ addEventListener("click", function() {
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+  if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
     document.getElementById("scrollToTopBtn").classList.add("show");
   } else {
     document.getElementById("scrollToTopBtn").classList.remove("show");
