@@ -12,6 +12,7 @@ def index():
 @app.route('/stock.html', methods=['GET', 'POST'])
 def submit():
   if request.method == 'POST':
+    if 'submit' in request.form:
         ticker_symbol = request.form['textarea']
         stock_data = yf.Ticker(ticker_symbol)
         company_name = stock_data.info['longName']
@@ -23,6 +24,8 @@ def submit():
                                'name': company_name, 
                                'price': close_price})
         # entered_string.append(to_return)
+    elif 'clear' in request.form:
+        entered_string.clear()
   return render_template('stock.html', entered_string=entered_string)
 
 if __name__ == '__main__':
