@@ -14,8 +14,16 @@ def submit():
   if request.method == 'POST':
     if 'submit' in request.form:
         ticker_symbol = request.form['textarea']
-        stock_data = yf.Ticker(ticker_symbol)
-        company_name = stock_data.info['longName']
+        try: 
+           stock_data = yf.Ticker(ticker_symbol)
+        except:
+           print('No such ticker!')
+           return render_template('stock.html', entered_string=entered_string)
+        try:
+           company_name = stock_data.info['longName']
+        except KeyError as e:
+           print(e)
+           return render_template('stock.html', entered_string=entered_string)
         historical_data = stock_data.history(period="1d")
         close_price = historical_data['Close'].iloc[-1]
         symbol = stock_data.info['symbol']
